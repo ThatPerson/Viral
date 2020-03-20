@@ -36,7 +36,7 @@ int rate_l(float r) {
 	return (rng(0, 10000)<k)?1:0;
 } // Returns 1 if event occurs
 
-int update(void) {
+void update(void) {
 	int i;
         int st_c[4] = {0, 0, 0, 0};
 	
@@ -45,7 +45,7 @@ int update(void) {
 		st_c[p[i].state]++;
 	}
 	printf("%d, %d, %d, %d\n", st_c[0], st_c[1], st_c[2], st_c[3]);
-
+	return;
 }
 
 int iterate(void) {
